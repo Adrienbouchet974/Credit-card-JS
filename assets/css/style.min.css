@@ -25,6 +25,18 @@
   margin-left: 38%;
 }
 
+.flip {
+  transform-origin: 29.5%;
+  transform: rotate3d(0, 1, 0, 90deg);
+  transition: 0.5s linear;
+}
+
+.flip_verso {
+  transform-origin: 29.5%;
+  transform: rotate3d(0, 1, 0, 0deg);
+  transition: 0.5s linear;
+}
+
 form {
   display: flex;
   flex-direction: column;
