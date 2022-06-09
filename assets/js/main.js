@@ -1,6 +1,5 @@
 //pour récupérer le formulaire
 const input = document.querySelector("#form");
-console.log(input);
 
 //pour récupérer les inputs
 const input_number = document.querySelector("#number");
@@ -27,9 +26,7 @@ input.addEventListener("submit", function(event) {
     // const value_crypto = input_crypto.value;
 
     const card_length = value_card.length;
-    console.log(card_length);
     const expiration_length = value_expiration.length;
-    console.log(expiration_length);
 
     if(card_length == 16 && value_card.match(/([0-9]{16})/)){
 
@@ -77,15 +74,10 @@ console.log(credit_card);
 
 credit_card.addEventListener("click", function(){
     credit_card.classList.add("flip");
-    const flip = document.querySelector(".flip");
-    console.log(flip);
-    
     credit_card.addEventListener("transitionend", () => {
         credit_card.classList.remove("flip");
-        if(credit_card){
-            credit_card.style.background = "url('../assets/images/template_back.png')"
-            credit_card.style.backgroundRepeat = "no-repeat";
-            credit_card.classList.add("flip_verso");
-        }
+        credit_card.style.background = "url('../assets/images/template_back.png')"
+        credit_card.style.backgroundRepeat = "no-repeat";
+        credit_card.classList.add("flip_verso");
     })
 })
