@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Credit Card</title>
 </head>
 <body>
     
     <div class="credit_card">
-        
-        
-        <input type="text" name="card_number">
-        
+        <h1>Numéro de carte : </h1>
+        <div class="info">
+            <h3 class="nom">Nom :</h3>
+            <h3 class="prenom">Prénom :</h3>
+            <h3 class="expiration">date d'expiration :</h3>
+        </div>
     </div>
 
-    <script type="text/javascript" src="main.js"></script>
+    <form action="#" id="form">
+        <div class="card_number">
+            <input type="text" name="card_number">
+            <button type="submit">Enregistrer le numéro de la carte</button>
+        </div>
+        <div class="last_name">
+            <input type="text" name="last_name">
+            <button type="submit">Enregistrer le nom</button>
+        </div>
+        <div class="first_name">
+            <input type="text" name="first_name">
+            <button type="submit">Enregistrer le prénom</button>
+        </div>
+    </form>
 
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
