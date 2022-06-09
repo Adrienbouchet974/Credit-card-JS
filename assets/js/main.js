@@ -33,4 +33,22 @@ input.addEventListener("submit", function(event) {
     card_prenom.textContent += ` ${value_first_name}`;
     card_expiration.textContent += ` ${value_expiration}`;
 
+});
+
+const credit_card = document.querySelector("#credit_card");
+console.log(credit_card);
+
+credit_card.addEventListener("click", function(){
+    credit_card.classList.add("flip");
+    const flip = document.querySelector(".flip");
+    console.log(flip);
+    
+    credit_card.addEventListener("transitionend", () => {
+        credit_card.classList.remove("flip");
+        if(credit_card){
+            credit_card.style.background = "url('../assets/images/template_back.png')"
+            credit_card.style.backgroundRepeat = "no-repeat";
+            credit_card.classList.add("flip_verso");
+        }
     })
+})
