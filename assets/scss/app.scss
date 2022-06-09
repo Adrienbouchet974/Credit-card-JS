@@ -1,36 +1,21 @@
 .credit_card {
-    margin-left: 5%;
+    background: url('../images/template_credit_card.png');
     margin-right: 25%;
     display: flex;
     align-items: center;
-    height: 400px;
-    background-image: url('../images/template_credit_card.png');
-    background-repeat: no-repeat;
     h1 {
         margin-left: 1%;
-        padding-bottom: 2%;
+    }
+    .title {
+        height: 10%;
+        width: 70%;
     }
     .info {
-        display: flex;
-        top: 50%;
-        width: 50%;
-        margin-left: -25%;
+        display: block;
+        margin-left: 0;
         margin-top: 20%;
-        .nom {
-            margin-left: 15%;
-            margin-top: -1%;
-            margin-right: 10%;
-        }
-        .prenom {
-            margin-left: -17.5%;
-            margin-top: 10%;
-        }
-        .expiration {
-            margin-left: 40%;
-        }
     }
 }
-
 form {
     .form{
         display: flex;
