@@ -9,39 +9,42 @@
 </head>
 <body>
     
-    <div class="credit_card" id="credit_card">
-        <div class="title">
-            <h1 id="Num_card">Numéro de carte :</h1>
-            <!-- <h1 id="cryptogramme">Cryptogramme :</h1> -->
+    <div class="test">
+        <div class="credit_card" id="credit_card">
+            <div class="title">
+                <h1 id="Num_card">Numéro de carte :</h1>
+                <!-- <h1 id="cryptogramme">Cryptogramme :</h1> -->
+            </div>
+            <div class="info">
+                <h3 class="nom" id="card_nom">Nom :</h3>
+                <h3 class="prenom" id="card_prenom">Prénom :</h3>
+                <h3 class="expiration" id="card_expiration">date d'expiration :</h3>
+            </div>
         </div>
-        <div class="info">
-            <h3 class="nom" id="card_nom">Nom :</h3>
-            <h3 class="prenom" id="card_prenom">Prénom :</h3>
-            <h3 class="expiration" id="card_expiration">date d'expiration :</h3>
+
+        <div class="origin">
+            <form action="#" id="form">
+                <div class="form">
+                    <div>
+                        <input type="text" name="card_number" id="number" placeholder="numéro de carte">
+                    </div>
+                    <div>
+                        <input type="text" name="last_name" id="Nom" placeholder="Nom">
+                    </div>
+                    <div>
+                        <input type="text" name="first_name" id="Prenom" placeholder="Prénom">
+                    </div>
+                    <div>
+                        <input type="text" name="first_name" id="Expiration" placeholder="Date d'expiration">
+                    </div>
+                    <div>
+                        <input type="text" name="first_name" id="crypto" placeholder="Cryptogramme">
+                    </div>
+                    <button type="submit">Enregistrer les données</button>
+                </div>
+            </form>
         </div>
     </div>
-
-    <form action="#" id="form">
-        <div class="form">
-            <div>
-                <input type="text" name="card_number" id="number" placeholder="numéro de carte">
-            </div>
-            <div>
-                <input type="text" name="last_name" id="Nom" placeholder="Nom">
-            </div>
-            <div>
-                <input type="text" name="first_name" id="Prenom" placeholder="Prénom">
-            </div>
-            <div>
-                <input type="text" name="first_name" id="Expiration" placeholder="Date d'expiration">
-            </div>
-            <div>
-                <input type="text" name="first_name" id="crypto" placeholder="Cryptogramme">
-            </div>
-            <button type="submit">Enregistrer les données</button>
-        </div>
-    </form>
-
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
