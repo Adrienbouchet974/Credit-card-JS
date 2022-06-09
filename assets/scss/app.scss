@@ -1,28 +1,37 @@
 .credit_card {
+    width: 100%;
+    height: 20%;
     background: url('../images/template_credit_card.png');
-    margin-right: 25%;
+    background-size: auto;
     display: flex;
-    align-items: center;
-    h1 {
-        margin-left: 1%;
-    }
+    flex-direction: column;
+    background-repeat: no-repeat;
     .title {
+        padding-top: 15%;
         height: 10%;
-        width: 70%;
+        width: 89%;
+        h1 {
+            width: 98%;
+            margin-left: 2%;
+        }
     }
     .info {
         display: block;
-        margin-left: 0;
-        margin-top: 20%;
+        margin-left: 2%;
+        width: 87%;
+        .expiration {
+            margin-left: 38%;
+        }
     }
 }
+
+
 form {
-    .form{
+    // .form{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: -10%;
-        margin-left: 50%;
+        margin-left: 3%;
         div {
             margin-right: 50%;
             margin-top: 2%;
@@ -31,5 +40,5 @@ form {
             margin-right: 50%;
             margin-top: 2%;
         }
-    }
+    // }
 }
