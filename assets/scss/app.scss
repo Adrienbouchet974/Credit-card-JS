@@ -1,54 +1,58 @@
-.credit_card {
-    width: 100%;
-    height: 20%;
-    background: url('../images/template_credit_card.png');
-    background-size: auto;
+.test {
     display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    .title {
-        padding-top: 15%;
-        height: 10%;
-        width: 89%;
-        h1 {
-            width: 98%;
+    justify-content: space-between;
+    align-items: center;
+    .credit_card {
+        width: 100%;
+        height: 20%;
+        background: url('../images/template_credit_card.png');
+        background-size: auto;
+        display: flex;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        .title {
+            padding-top: 15%;
+            height: 10%;
+            width: 58%;
+            h1 {
+                width: 98%;
+                margin-left: 2%;
+            }
+        }
+        .info {
+            display: block;
             margin-left: 2%;
+            width: 56%;
+            .expiration {
+                margin-left: 58%;
+            }
         }
     }
-    .info {
-        display: block;
-        margin-left: 2%;
-        width: 87%;
-        .expiration {
-            margin-left: 38%;
-        }
+
+    .flip {
+        transform-origin: 29.5%;
+        transform: rotate3d(0, 1, 0, 90deg);
+        transition: 0.5s linear;
     }
-}
-
-.flip {
-    transform-origin: 29.5%;
-    transform: rotate3d(0, 1, 0, 90deg);
-    transition: 0.5s linear;
-}
-.flip_verso {
-    transform-origin: 29.5%;
-    transform: rotate3d(0, 1, 0, 0deg);
-    transition: 0.5s linear;
-}
-
-form {
-    // .form{
+    .flip_verso {
+        transform-origin: 29.5%;
+        transform: rotate3d(0, 1, 0, 0deg);
+        transition: 0.5s linear;
+    }
+    .origin{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 3%;
-        div {
-            margin-right: 50%;
-            margin-top: 2%;
+        form {
+            div {
+                margin-right: 50%;
+                margin-top: 2%;
+            }
+            button {
+                margin-right: 50%;
+                margin-top: 2%;
+            }
         }
-        button {
-            margin-right: 50%;
-            margin-top: 2%;
-        }
-    // }
+    }
 }
