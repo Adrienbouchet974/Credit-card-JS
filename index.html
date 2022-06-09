@@ -10,11 +10,11 @@
 <body>
     
     <div class="credit_card">
-        <h1>Numéro de carte : </h1>
+        <h1 id="Num_card">Numéro de carte : </h1>
         <div class="info">
-            <h3 class="nom">Nom :</h3>
-            <h3 class="prenom">Prénom :</h3>
-            <h3 class="expiration">date d'expiration :</h3>
+            <h3 class="nom" id="card_nom">Nom :</h3>
+            <h3 class="prenom" id="card_prénom">Prénom :</h3>
+            <h3 class="expiration" id="card_expiration">date d'expiration :</h3>
         </div>
     </div>
 
@@ -22,15 +22,15 @@
         <div class="form">
             <div>
                 <input type="text" name="card_number" id="number" placeholder="numéro de carte">
-                <!-- <button type="submit" id="card_number">Enregistrer le numéro de la carte</button> -->
             </div>
             <div>
                 <input type="text" name="last_name" id="Nom" placeholder="Nom">
-                <!-- <button type="submit" id="last_name">Enregistrer le nom</button> -->
             </div>
             <div>
                 <input type="text" name="first_name" id="Prénom" placeholder="Prénom">
-                <!-- <button type="submit" id="first_name">Enregistrer le prénom</button> -->
+            </div>
+            <div>
+                <input type="text" name="first_name" id="Expiration" placeholder="Date d'expiration">
             </div>
             <button type="submit">Enregistrer les données</button>
         </div>
