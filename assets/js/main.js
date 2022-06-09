@@ -16,14 +16,3 @@ input.addEventListener("submit", function(event) {
     console.log(value_last_name);
     console.log(value_first_name);
 })
-// input_last_name.addEventListener("submit", function(e) {
-//     e.preventDefault();
-//     console.log(e);
-// })
-// input_first_name.addEventListener("submit", function(e) {
-//     e.preventDefault();
-//     console.log(e);
-// })
-
-
-// const card_number = document.querySelector('');
