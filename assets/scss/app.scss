@@ -4,7 +4,16 @@ body {
 }
 
 .secure {
-    margin-left: 25%;
+    margin-left: 13%;
+    img {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+    .info_paiement {
+        font-size: large;
+        color: rgb(104, 104, 104);
+    }
 }
 
 header {
@@ -20,6 +29,9 @@ header {
             text-align: center;
             font-size: x-large;
             margin-bottom: 30px;
+            .argent_frais {
+                color: rgb(20, 194, 20);
+            }
         }
     }
 }
