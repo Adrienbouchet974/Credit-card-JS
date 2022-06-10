@@ -21,6 +21,24 @@ const value_first_name = input_first_name.value;
 const value_expiration = input_expiration.value;
 const value_crypto = input_crypto.value;
 
+const credit_card = document.querySelector("#credit_card");
+console.log(card_crypto.textContent = `${value_crypto}`)
+
+function entire_flip(){
+    credit_card.addEventListener("mouseover", () => {
+        credit_card.classList.add("flip");
+        credit_card.addEventListener("transitionend", () => {
+            card_numero.style.display = "none";
+            card_nom.style.display = "none";
+            card_prenom.style.display = "none";
+            card_expiration.style.display = "none";
+            card_crypto.style.display = "";
+            credit_card.classList.remove("flip")
+            credit_card.classList.add("flip_verso");
+            credit_card.style.background = "url(/assets/images/template_back.png) no-repeat";
+        })
+    })
+}
 
 input.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -74,30 +92,13 @@ input.addEventListener("submit", function(event) {
         alert("le cryptogramme ne doit comporter que 3 chiffres");
     }
     
+    if(card_numero.textContent == ` ${value_card}` && card_nom.textContent == ` ${value_last_name}` && card_prenom.textContent == ` ${value_first_name}` && card_expiration.textContent == ` ${value_expiration}` && card_crypto.textContent == ` ${value_crypto}`){
+        entire_flip()
+    }else{
+        return entire_flip();
+    }
 
 });
-
-
-const credit_card = document.querySelector("#credit_card");
-console.log(card_crypto.textContent = `${value_crypto}`)
-
-function entire_flip(){
-    credit_card.addEventListener("mouseover", () => {
-        credit_card.classList.add("flip");
-        credit_card.addEventListener("transitionend", () => {
-            card_numero.style.display = "none";
-            card_nom.style.display = "none";
-            card_prenom.style.display = "none";
-            card_expiration.style.display = "none";
-            card_crypto.style.display = "";
-            credit_card.classList.remove("flip")
-            credit_card.classList.add("flip_verso");
-            credit_card.style.background = "url(/assets/images/template_back.png)";
-        })
-    })
-}
-
-entire_flip();
 
 
     
