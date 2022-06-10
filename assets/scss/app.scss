@@ -4,9 +4,19 @@ body {
 }
 
 header {
-    p {
+    .paiement {
+        color: chocolate;
         text-align: center;
-        font-size: xx-large;
+        font-size: 50px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    div {
+        .frais {
+            text-align: center;
+            font-size: x-large;
+            margin-bottom: 30px;
+        }
     }
 }
 
