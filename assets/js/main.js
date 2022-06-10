@@ -73,11 +73,23 @@ const info_3 = document.querySelector("#card_expiration");
 console.log(credit_card);
 
 credit_card.addEventListener("click", function(){
-    credit_card.classList.add("flip");
+    if(credit_card.classList.contains("credit_card")){
+        credit_card.classList.add("flip");
+        credit_card.addEventListener("transitionend", () => {
+            credit_card.classList.remove("flip");
+            credit_card.style.background = "url('../assets/images/template_back.png')"
+            credit_card.style.backgroundRepeat = "no-repeat";
+            credit_card.classList.add("flip_verso");
+        })
+    }
+    if(credit_card.classList.contains("flip_verso")){
+    credit_card.classList.remove("flip_verso");
     credit_card.addEventListener("transitionend", () => {
         credit_card.classList.remove("flip");
-        credit_card.style.background = "url('../assets/images/template_back.png')"
+        credit_card.classList.add("flip");
+        credit_card.style.background = "url('../assets/images/template_credit_card.png')"
         credit_card.style.backgroundRepeat = "no-repeat";
-        credit_card.classList.add("flip_verso");
-    })
+        })
+    }
 })
+
