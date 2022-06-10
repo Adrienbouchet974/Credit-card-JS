@@ -15,11 +15,11 @@ const card_prenom = document.querySelector("#card_prenom");
 const card_expiration = document.querySelector("#card_expiration");
 const card_crypto = document.querySelector("#cryptogramme");
 
-    const value_card = input_number.value;
-    const value_last_name = input_last_name.value;
-    const value_first_name = input_first_name.value;
-    const value_expiration = input_expiration.value;
-    const value_crypto = input_crypto.value;
+const value_card = input_number.value;
+const value_last_name = input_last_name.value;
+const value_first_name = input_first_name.value;
+const value_expiration = input_expiration.value;
+const value_crypto = input_crypto.value;
 
 
 input.addEventListener("submit", function(event) {
@@ -30,7 +30,6 @@ input.addEventListener("submit", function(event) {
     const value_first_name = input_first_name.value;
     const value_expiration = input_expiration.value;
     const value_crypto = input_crypto.value;
-    console.log(value_crypto);
 
     const card_length = value_card.length;
     const expiration_length = value_expiration.length;
@@ -66,29 +65,41 @@ input.addEventListener("submit", function(event) {
     }else{
         alert("le format de la date est une série de 2 nombres séparée par un /. Exemple : 14/96");
     }
+    if(value_crypto.match(/[0-9]{3}/)){
+
+        card_crypto.textContent = ` ${value_crypto}`;
+        card_crypto.style.display = "none";
+        
+    }else{
+        alert("le cryptogramme ne doit comporter que 3 chiffres");
+    }
     
 
 });
 
 
 const credit_card = document.querySelector("#credit_card");
-console.log(credit_card.className);
+console.log(card_crypto.textContent = `${value_crypto}`)
 
 function entire_flip(){
     credit_card.addEventListener("mouseover", () => {
-        
-            credit_card.classList.add("flip");
-            credit_card.addEventListener("transitionend", () => {
-                credit_card.classList.remove("flip");
-                credit_card.classList.add("flip_verso");
-                credit_card.style.background = "url(/assets/images/template_back.png)";
-            })
+        credit_card.classList.add("flip");
+        credit_card.addEventListener("transitionend", () => {
+            card_numero.style.display = "none";
+            card_nom.style.display = "none";
+            card_prenom.style.display = "none";
+            card_expiration.style.display = "none";
+            card_crypto.style.display = "";
+            credit_card.classList.remove("flip")
+            credit_card.classList.add("flip_verso");
+            credit_card.style.background = "url(/assets/images/template_back.png)";
         })
-    
-
-    credit_card.addEventListener("mouseout", () => {
-        credit_card.classList.remove("flip_verso");
     })
 }
 
 entire_flip();
+
+
+    
+    
+    
