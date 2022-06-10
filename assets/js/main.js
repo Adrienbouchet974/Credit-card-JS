@@ -71,72 +71,24 @@ input.addEventListener("submit", function(event) {
 });
 
 
+const credit_card = document.querySelector("#credit_card");
+console.log(credit_card.className);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const credit_card = document.querySelector("#credit_card");
-// const info_0 = document.querySelector("#Num_card");
-// const infos = document.querySelector(".info");
-// // const info_1 = document.querySelector("#card_nom");
-// // const info_2 = document.querySelector("#card_prenom");
-// // const info_3 = document.querySelector("#card_expiration");
-// const info_4 = document.querySelector("#cryptogramme");
-// const h1 = credit_card.children[1];
-// console.log(h1.textContent = "bonjour");
-
-
-
-// console.log(credit_card);
-// info_4.style.display = "none";
-// console.log(info_4.style.display == "none");
-
-// credit_card.addEventListener("click", function(){
-//     if(info_4.style.display == "none"){
-//         credit_card.classList.add("flip");
-//     }
-//     credit_card.addEventListener("transitionend", () => {
-//         credit_card.classList.remove("flip");
-//         info_0.style.display = "none";
-//         infos.style.display = "none";
-//         info_4.style.display = "";
-//         credit_card.style.background = "url('../assets/images/template_back.png')"
-//         credit_card.style.backgroundRepeat = "no-repeat";
-//         credit_card.classList.add("flip_verso");
-//         credit_card.children[1].textContent = `${value_crypto}`;
-//     })
+function entire_flip(){
+    credit_card.addEventListener("mouseover", () => {
+        
+            credit_card.classList.add("flip");
+            credit_card.addEventListener("transitionend", () => {
+                credit_card.classList.remove("flip");
+                credit_card.classList.add("flip_verso");
+                credit_card.style.background = "url(/assets/images/template_back.png)";
+            })
+        })
     
-    
-    
-    
-// })
 
-// credit_card.addEventListener("click", function(){
-    
-    
-    
-//     if(info_4.style.display == ""){
-//         credit_card.classList.remove("flip_verso");
-//         credit_card.classList.add("flip");
-//         credit_card.addEventListener("transitionend", () => {
-//             info_0.style.display = "";
-//             infos.style.display = "";
-//             h1.textContent = `${value_crypto}`;
-//             credit_card.classList.remove("flip_verso");
-//             credit_card.classList.add("flip_verso");
-//             credit_card.style.background = "url('../assets/images/template_credit_card.png')"
-//             credit_card.style.backgroundRepeat = "no-repeat";
-//         })
-//     }
-// })
-// console.log(info_0.add);
+    credit_card.addEventListener("mouseout", () => {
+        credit_card.classList.remove("flip_verso");
+    })
+}
+
+entire_flip();
