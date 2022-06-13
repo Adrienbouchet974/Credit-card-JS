@@ -59,6 +59,7 @@ header {
         }
         .info {
             margin-left: 2%;
+            margin-top: 6%;
             .expiration {
                 margin-left: 58%;
             }
@@ -75,20 +76,9 @@ header {
         align-content: stretch;
         height: 406px;
         justify-content: flex-start;
-        .title {
-            display: flex;
-            padding-top: 7%;
-            justify-content: center;
-        }
         .cryptogramme {
             text-align: center;
-            margin-top: 18.5%;
-        }
-        .info {
-            margin-left: 2%;
-            .expiration {
-                margin-left: 58%;
-            }
+            margin-top: 25%;
         }
     }
 
