@@ -33,7 +33,7 @@ function entire_flip(){
             card_expiration.style.display = "none";
             card_crypto.style.display = "";
             credit_card.classList.add("flip_verso");
-            credit_card.style.background = "url(./images/template_back.png) no-repeat"
+            credit_card.style.background = "url(../assets/images/template_back.png) no-repeat"
     })
     credit_card.addEventListener("mouseout", () => {
         credit_card.classList.remove("flip");
