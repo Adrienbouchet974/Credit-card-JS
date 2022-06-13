@@ -26,20 +26,26 @@ console.log(card_crypto.textContent = `${value_crypto}`)
 
 function entire_flip(){
     credit_card.addEventListener("mouseover", () => {
-        credit_card.classList.toggle("flip");
-        credit_card.addEventListener("transitionend", () => {
+        credit_card.classList.add("flip");
             card_numero.style.display = "none";
             card_nom.style.display = "none";
             card_prenom.style.display = "none";
             card_expiration.style.display = "none";
             card_crypto.style.display = "";
-            credit_card.classList.remove("flip")
             credit_card.classList.add("flip_verso");
             credit_card.style.background = "url(/assets/images/template_back.png) no-repeat"
-        })
+    })
+    credit_card.addEventListener("mouseout", () => {
+        credit_card.classList.remove("flip");
+        credit_card.classList.remove("flip_verso");
+        credit_card.style.background = "";
+        card_numero.style.display = "";
+            card_nom.style.display = "";
+            card_prenom.style.display = "";
+            card_expiration.style.display = "";
+            card_crypto.style.display = "none";
     })
 }
-
 
 input.addEventListener("submit", function(event) {
     event.preventDefault();
