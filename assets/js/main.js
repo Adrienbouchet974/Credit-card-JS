@@ -32,12 +32,18 @@ function entire_flip(){
             card_prenom.style.display = "none";
             card_expiration.style.display = "none";
             card_crypto.style.display = "";
+            credit_card.classList.remove("credit_card");
             credit_card.classList.add("flip_verso");
-            credit_card.style.background = "url('../images/template_back.png') no-repeat";
+            credit_card.classList.add("credit_card_verso");
+            credit_card.addEventListener("transitionend", () => {
+                credit_card.classList.remove("flip");
+                credit_card.classList.remove("flip_verso");
+            })
+            
     })
     credit_card.addEventListener("mouseout", () => {
-        credit_card.classList.remove("flip");
-        credit_card.classList.remove("flip_verso");
+        credit_card.classList.remove("credit_card_verso");
+        credit_card.classList.add("credit_card");
         credit_card.style.background = "";
         card_numero.style.display = "";
             card_nom.style.display = "";
