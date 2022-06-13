@@ -56,6 +56,7 @@ header div .frais .argent_frais {
 }
 .test .credit_card .info {
   margin-left: 2%;
+  margin-top: 6%;
 }
 .test .credit_card .info .expiration {
   margin-left: 58%;
@@ -71,20 +72,9 @@ header div .frais .argent_frais {
   height: 406px;
   justify-content: flex-start;
 }
-.test .credit_card_verso .title {
-  display: flex;
-  padding-top: 7%;
-  justify-content: center;
-}
 .test .credit_card_verso .cryptogramme {
   text-align: center;
-  margin-top: 18.5%;
-}
-.test .credit_card_verso .info {
-  margin-left: 2%;
-}
-.test .credit_card_verso .info .expiration {
-  margin-left: 58%;
+  margin-top: 25%;
 }
 .test .flip {
   transform-origin: 29.5%;
