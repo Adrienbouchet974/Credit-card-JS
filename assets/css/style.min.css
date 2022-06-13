@@ -43,7 +43,7 @@ header div .frais .argent_frais {
   background-repeat: no-repeat;
   flex-direction: column;
   align-content: stretch;
-  height: 326px;
+  height: 406px;
   justify-content: flex-start;
 }
 .test .credit_card .title {
@@ -58,6 +58,31 @@ header div .frais .argent_frais {
   margin-left: 2%;
 }
 .test .credit_card .info .expiration {
+  margin-left: 58%;
+}
+.test .credit_card_verso {
+  display: flex;
+  width: 78%;
+  background: url(../images/template_back.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-content: stretch;
+  height: 406px;
+  justify-content: flex-start;
+}
+.test .credit_card_verso .title {
+  display: flex;
+  padding-top: 7%;
+  justify-content: center;
+}
+.test .credit_card_verso .cryptogramme {
+  text-align: center;
+}
+.test .credit_card_verso .info {
+  margin-left: 2%;
+}
+.test .credit_card_verso .info .expiration {
   margin-left: 58%;
 }
 .test .flip {
