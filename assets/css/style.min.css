@@ -78,6 +78,7 @@ header div .frais .argent_frais {
 }
 .test .credit_card_verso .cryptogramme {
   text-align: center;
+  margin-top: 18.5%;
 }
 .test .credit_card_verso .info {
   margin-left: 2%;
