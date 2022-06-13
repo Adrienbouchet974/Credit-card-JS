@@ -47,7 +47,33 @@ header {
         background-repeat: no-repeat;
         flex-direction: column;
         align-content: stretch;
-        height: 326px;
+        height: 406px;
+        justify-content: flex-start;
+        .title {
+            display: flex;
+            padding-top: 7%;
+            justify-content: center;
+        }
+        .cryptogramme {
+            text-align: center;
+        }
+        .info {
+            margin-left: 2%;
+            .expiration {
+                margin-left: 58%;
+            }
+        }
+    }
+
+    .credit_card_verso {
+        display: flex;
+        width: 78%;
+        background: url(../images/template_back.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        align-content: stretch;
+        height: 406px;
         justify-content: flex-start;
         .title {
             display: flex;
@@ -70,11 +96,13 @@ header {
         transform: rotate3d(0, 1, 0, 90deg);
         transition: 0.5s linear;
     }
+
     .flip_verso {
         transform-origin: 29.5%;
         transform: rotate3d(0, 1, 0, 0deg);
         transition: 0.5s linear;
     }
+
     .origin{
         display: flex;
         justify-content: space-around;
