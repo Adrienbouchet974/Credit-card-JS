@@ -22,7 +22,39 @@ const value_expiration = input_expiration.value;
 const value_crypto = input_crypto.value;
 
 const credit_card = document.querySelector("#credit_card");
-console.log(card_crypto.textContent = `${value_crypto}`)
+
+function flip(){
+    input_crypto.addEventListener("mouseover", () => {
+        credit_card.classList.add("flip");
+        card_numero.style.display = "none";
+        card_nom.style.display = "none";
+        card_prenom.style.display = "none";
+        card_expiration.style.display = "none";
+        card_crypto.style.display = "";
+        credit_card.classList.remove("credit_card");
+        credit_card.classList.add("flip_verso");
+        credit_card.classList.add("credit_card_verso");
+        credit_card.addEventListener("transitionend", () => {
+            credit_card.classList.remove("flip");
+            credit_card.classList.remove("flip_verso");
+        })
+    })
+}
+flip();
+
+function flip_reverse(){
+    input_crypto.addEventListener("mouseout", () => {
+        credit_card.classList.remove("credit_card_verso");
+        credit_card.classList.add("credit_card");
+        credit_card.style.background = "";
+        card_numero.style.display = "";
+            card_nom.style.display = "";
+            card_prenom.style.display = "";
+            card_expiration.style.display = "";
+            card_crypto.style.display = "none";
+    })
+}
+flip_reverse();
 
 function entire_flip(){
     credit_card.addEventListener("mouseover", () => {
