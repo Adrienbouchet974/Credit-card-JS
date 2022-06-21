@@ -3,10 +3,13 @@ const input = document.querySelector("#form");
 
 //pour récupérer les inputs
 const input_number = document.querySelector("#number");
+input_number.maxLength = 16;
 const input_last_name = document.querySelector("#Nom");
 const input_first_name = document.querySelector("#Prenom");
 const input_expiration = document.querySelector("#Expiration");
+input_expiration.maxLength = 5
 const input_crypto = document.querySelector("#crypto");
+input_crypto.maxLength = 3
 
 //pour récupérer le texte
 const card_numero = document.querySelector("#Num_card");
@@ -23,8 +26,27 @@ const value_crypto = input_crypto.value;
 
 const credit_card = document.querySelector("#credit_card");
 
+function live() {
+    input_first_name.addEventListener("input", () => {
+        card_prenom.textContent = input_first_name.value
+    })
+    input_last_name.addEventListener("input", () => {
+        card_nom.textContent = input_last_name.value
+    })
+    input_number.addEventListener("input", () => {
+        card_numero.textContent = input_number.value
+    })
+    input_expiration.addEventListener("input", () => {
+        card_expiration.textContent = input_expiration.value
+    })
+    input_crypto.addEventListener("input", () => {
+        card_crypto.textContent = input_crypto.value
+    })
+}
+live()
+
 function flip(){
-    input_crypto.addEventListener("mouseover", () => {
+    input_crypto.addEventListener("click", () => {
         credit_card.classList.add("flip");
         card_numero.style.display = "none";
         card_nom.style.display = "none";
